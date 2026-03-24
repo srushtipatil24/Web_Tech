@@ -1,0 +1,33 @@
+express is used in backend
+Express is a backend framework that helps you create servers, handle requests, and build web applications using JavaScript.
+its minimal and flexible web application framework for node js that simplifies develpoment of web server and API's
+
+features:- rounting, middleware support, request and respond handling,REST API creation, template rendering
+NPM: Node Package Manager
+init Means for “initialize”
+
+diff between dev dependency and dependency??
+diff between Package.json and Package-lock.json??
+info about http request...
+
+const express = require('express') :- import the express
+const app = express()
+const port = 3000 :- it comes from localhost 
+//At company level port comes from .env
+
+app.get('/', (req, res) => {   //  here / is rounting
+app.get('/' // represents home Page 
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+
+
+route is refers to determing how to application responds to client request for specific URL and http methods(/)
+
+***middleware is express js***
+it is function are function that execute during the lifecycle of request before sending the final responces
+They have access to Request Response and Next

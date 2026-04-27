@@ -31,3 +31,5 @@ route is refers to determing how to application responds to client request for s
 ***middleware is express js***
 it is function are function that execute during the lifecycle of request before sending the final responces
 They have access to Request Response and Next
+
+//Activity

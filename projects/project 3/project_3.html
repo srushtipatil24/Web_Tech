@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking System</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 60px auto;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        input {
+            padding: 8px;
+            width: 80%;
+            margin: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .deposit { background-color: green; color: white; }
+        .withdraw { background-color: red; color: white; }
+        .reset { background-color: orange; color: white; }
+        .logout { background-color: black; color: white; }
+
+    </style>
+</head>
+<body>
+
+<!-- Login-->
+<div class="box" id="loginBox">
+    <h2> Login</h2>
+    <input type="password" id="pin" placeholder="Enter PIN">
+    <br>
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+</div>
+
+<!-- Bank -->
+<div class="box" id="bankBox" style="display:none;">
+    <h2> Mini Banking</h2>
+
+    <p><b>Balance: ₹ <span id="balance">0</span></b></p>
+
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <br>
+
+    <button class="deposit" onclick="deposit()">Deposit</button>
+    <button class="withdraw" onclick="withdraw()">Withdraw</button>
+    <button class="reset" onclick="resetAccount()">Reset</button>
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <p id="message"></p>
+
+    <h3>History</h3>
+    <ul id="history"></ul>
+</div>
+
+<script src="project_3.js"></script>
+
+</body>
+</html>

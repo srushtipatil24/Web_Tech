@@ -1,0 +1,3 @@
+app.get(/'Student',req,res)=>{
+    res.send('get Student')
+}

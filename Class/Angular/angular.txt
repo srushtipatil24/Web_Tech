@@ -1,0 +1,35 @@
+package.json is configuration file information about 
+package.log.json is same configuration file but detailed information
+package.json → What packages you WANT
+package-lock.json → What packages you GOT
+
+there are two types of data types in JavaScript: primitive and non-primitive.
+ Primitive data types include string, number, boolean, null, undefined, and symbol.
+ Non-primitive data types include objects, arrays, and functions.
+
+angular.json is project configuration file
+style.css = global css
+gigtigonre = version control file
+index.html = main html file loads angular
+
+
+main.ts = entry file
+app configuration.ts = app configuration file
+
+components are ui blocks of structure : when we create components it create 4 files = html, css, ts , spec.cs
+when we create component ng service service.name
+uses HTML → Structure
+     CSS → Style
+     TS → Logic
+     Spec.ts → Testing
+
+
+data bindings means connect ui to code
+| Type               | Symbol  | Direction | Use                 |
+| ------------------ | ------- | --------- | ------------------- |
+| Interpolation      | `{{ }}  | TS → HTML | Display data        |
+| Property Binding   | `[ ]`   | TS → HTML | Set properties      |
+| Event Binding      | `( )`   | HTML → TS | Handle events       |
+| Two-Way Binding    | `[()]`  | TS ↔ HTML | Sync data both ways |
+
+

@@ -6,7 +6,7 @@ let balance = localStorage.getItem("balance")
     ? Number(localStorage.getItem("balance")) 
     : 0;
 
-let historyList = JSON.parse(localStorage.getItem("history")) || [];
+let historyList = JSON.parse(localStorage.getItem("history")) || [];//converting string to array
 
 // Login
 function login() {
@@ -17,7 +17,7 @@ function login() {
         document.getElementById("bankBox").style.display = "block";
         loadUI();
     } else {
-        document.getElementById("loginMsg").innerText = "❌ Wrong PIN";
+        document.getElementById("loginMsg").innerText = " Wrong PIN";
     }
 }
 

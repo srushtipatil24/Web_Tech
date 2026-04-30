@@ -1,0 +1,168 @@
+.wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 4px;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 16px;
+}
+
+/* Button */
+.btn {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+.btn:hover { background: #1558b0; }
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.success-btn { background: #34a853; }
+.warning-btn { background: #f9ab00; }
+.danger-btn  { background: #e53935; }
+.info-btn    { background: #1a73e8; }
+
+/* Alerts */
+.alert {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.success   { background: #e6f4ea; color: #1e7e34; border-left: 4px solid #34a853; }
+.warning   { background: #fff8e1; color: #856404; border-left: 4px solid #f9ab00; }
+.danger    { background: #fdecea; color: #c62828; border-left: 4px solid #e53935; }
+.info      { background: #e8f0fe; color: #1558b0; border-left: 4px solid #1a73e8; }
+
+/* Student List */
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f8f9ff;
+  margin-bottom: 8px;
+}
+
+.index {
+  width: 24px;
+  height: 24px;
+  background: #1a73e8;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name { flex: 1; font-size: 15px; color: #1a1a2e; font-weight: 500; }
+
+.remove-btn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #fdecea;
+  color: #e53935;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Switch */
+.select-box {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  font-size: 14px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.switch-result { margin-top: 8px; }
+
+.day-msg {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.monday    { background: #e8f0fe; color: #1558b0; }
+.tuesday   { background: #e6f4ea; color: #1e7e34; }
+.wednesday { background: #fff8e1; color: #856404; }
+.thursday  { background: #fce8e6; color: #c5221f; }
+.friday    { background: #f3e8fd; color: #6a1b9a; }
+
+/* ngStyle controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.controls label { font-size: 13px; font-weight: 600; color: #555; }
+.controls input[type="range"] { width: 100%; }
+.controls input[type="color"] { width: 60px; height: 36px; border: none; cursor: pointer; }
+
+.style-preview {
+  padding: 16px;
+  background: #f8f9ff;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s;
+}

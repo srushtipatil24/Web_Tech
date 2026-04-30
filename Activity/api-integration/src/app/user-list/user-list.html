@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="header">
+    <h1 class="page-title">User Directory</h1>
+    <p class="page-subtitle">Fetched from JSONPlaceholder API using HttpClient & Observables</p>
+    <button class="refresh-btn" (click)="fetchUsers()">Refresh</button>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="loading-box">
+    <div class="spinner"></div>
+    <p>Fetching users from API...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="hasError && !isLoading" class="error-box">
+    Something went wrong. Please check your connection and try again.
+  </div>
+
+  <!-- User Cards -->
+  <div *ngIf="!isLoading && !hasError" class="user-grid">
+    <div *ngFor="let user of users; let i = index" class="user-card">
+
+      <div class="avatar">
+        {{ user.name.charAt(0) }}
+      </div>
+
+      <div class="user-info">
+        <h3 class="user-name">{{ user.name }}</h3>
+        <p class="user-email">{{ user.email }}</p>
+        <p class="user-company">{{ user.company.name }}</p>
+      </div>
+
+      <span class="user-id">#{{ user.id }}</span>
+
+    </div>
+  </div>
+
+</div>

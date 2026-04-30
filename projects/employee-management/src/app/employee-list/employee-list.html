@@ -1,0 +1,10 @@
+<h2>Employee List</h2>
+
+<a routerLink="/add">Add Employee</a>
+
+<ul>
+  <li *ngFor="let emp of employees">
+    {{ emp.name }} - {{ emp.position }}
+    <button (click)="delete(emp.id)">Delete</button>
+  </li>
+</ul>

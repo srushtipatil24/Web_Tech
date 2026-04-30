@@ -1,0 +1,108 @@
+<div class="wrapper">
+  <h1 class="page-title">Angular Directives</h1>
+
+  <!-- ===================== -->
+  <!-- 1. ngIf               -->
+  <!-- ===================== -->
+  <div class="card">
+    <h2 class="card-title">1. *ngIf — Show / Hide</h2>
+    <p class="card-desc">Shows content based on a condition.</p>
+
+    <button class="btn" (click)="toggleLogin()">
+      {{ isLoggedIn ? 'Logout' : 'Login' }}
+    </button>
+
+    <div *ngIf="isLoggedIn; else loggedOut" class="alert success">
+       Welcome back! You are logged in.
+    </div>
+    <ng-template #loggedOut>
+      <div class="alert danger">
+         You are not logged in. Please login.
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- ===================== -->
+  <!-- 2. ngFor              -->
+  <!-- ===================== -->
+  <div class="card">
+    <h2 class="card-title">2. *ngFor — Loop List</h2>
+    <p class="card-desc">Loops through an array and renders each item.</p>
+
+    <ul class="student-list">
+      <li *ngFor="let student of students; let i = index" class="student-item">
+        <span class="index">{{ i + 1 }}</span>
+        <span class="name">{{ student }}</span>
+        <button class="remove-btn" (click)="removeStudent(i)">Remove</button>
+      </li>
+    </ul>
+    <button class="btn" (click)="addStudent()">+ Add Student</button>
+  </div>
+
+  <!-- ===================== -->
+  <!-- 3. ngSwitch           -->
+  <!-- ===================== -->
+  <div class="card">
+    <h2 class="card-title">3. ngSwitch — Conditional Blocks</h2>
+    <p class="card-desc">Renders one block from many based on value.</p>
+
+    <select [(ngModel)]="selectedDay" class="select-box">
+      <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+    </select>
+
+    <div [ngSwitch]="selectedDay" class="switch-result">
+      <p *ngSwitchCase="'Monday'"    class="day-msg monday">    Monday — Start strong!</p>
+      <p *ngSwitchCase="'Tuesday'"   class="day-msg tuesday">   Tuesday — Keep going!</p>
+      <p *ngSwitchCase="'Wednesday'" class="day-msg wednesday">  Wednesday — Halfway there!</p>
+      <p *ngSwitchCase="'Thursday'"  class="day-msg thursday">  Thursday — Almost Friday!</p>
+      <p *ngSwitchCase="'Friday'"    class="day-msg friday">    Friday — Weekend is near!</p>
+      <p *ngSwitchDefault            class="day-msg">           Select a day above.</p>
+    </div>
+  </div>
+
+  <!-- ===================== -->
+  <!-- 4. ngClass            -->
+  <!-- ===================== -->
+  <div class="card">
+    <h2 class="card-title">4. ngClass — Dynamic Classes</h2>
+    <p class="card-desc">Applies CSS classes dynamically based on data.</p>
+
+    <div class="btn-group">
+      <button class="btn success-btn" (click)="alertType = 'success'">Success</button>
+      <button class="btn warning-btn" (click)="alertType = 'warning'">Warning</button>
+      <button class="btn danger-btn"  (click)="alertType = 'danger'">Danger</button>
+      <button class="btn info-btn"    (click)="alertType = 'info'">Info</button>
+    </div>
+
+    <div [ngClass]="{
+      'alert': true,
+      'success': alertType === 'success',
+      'warning': alertType === 'warning',
+      'danger':  alertType === 'danger',
+      'info':    alertType === 'info'
+    }">
+      This is a <strong>{{ alertType }}</strong> message using ngClass!
+    </div>
+  </div>
+
+  <!-- ===================== -->
+  <!-- 5. ngStyle            -->
+  <!-- ===================== -->
+  <div class="card">
+    <h2 class="card-title">5. ngStyle — Dynamic Styles</h2>
+    <p class="card-desc">Applies inline styles dynamically.</p>
+
+    <div class="controls">
+      <label>Font Size: {{ fontSize }}px</label>
+      <input type="range" [(ngModel)]="fontSize" min="12" max="36" />
+
+      <label>Text Color:</label>
+      <input type="color" [(ngModel)]="textColor" />
+    </div>
+
+    <div [ngStyle]="{ 'font-size': fontSize + 'px', 'color': textColor }" class="style-preview">
+      This text changes style using ngStyle!
+    </div>
+  </div>
+
+</div>

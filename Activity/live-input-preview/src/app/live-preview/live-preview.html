@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="card">
+
+    <h2 class="title">Live Input Preview</h2>
+    <p class="subtitle">Type something below and see it appear live!</p>
+
+    <!-- Two-way Data Binding with ngModel -->
+    <div class="input-group">
+      <input
+        type="text"
+        [(ngModel)]="userText"
+        [maxlength]="maxLength"
+        placeholder="Start typing here..."
+        class="text-input"
+      />
+      <!-- Character Count -->
+      <span class="char-count" [class.warning]="isNearLimit">
+        {{ charCount }} / {{ maxLength }}
+      </span>
+    </div>
+
+    <!-- Live Preview -->
+    <div class="preview-box">
+      <span class="preview-label">Live Preview</span>
+      <p class="preview-text" *ngIf="userText; else empty">
+        {{ userText }}
+      </p>
+      <ng-template #empty>
+        <p class="placeholder-text">Your text will appear here...</p>
+      </ng-template>
+    </div>
+
+  </div>
+</div>
